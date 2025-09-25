@@ -8,7 +8,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
-<nav class="flex item-center p-4 item-center bg-teal-200 gap-4">
+<nav class="flex item-center p-4 item-center bg-teal-300 gap-4">
 	<ul class="flex justify-center gap-4">
 		<li class="list-item"><a href="/">home</a></li>
 		<li class="list-item"><a href="/about">about</a></li>
