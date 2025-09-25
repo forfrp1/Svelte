@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+
+@layer base{
+    h1{
+        @apply text-2xl font-bold
+    }
+}
+
+@layer components{
+    .list-item{
+        @apply cursor-pointer duration-300 hover:text-rose-500 capitalize
+    }
+}
