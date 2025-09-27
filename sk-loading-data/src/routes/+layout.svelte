@@ -14,5 +14,6 @@
 {#if page.data.notification}
   <p class="text-orange-600">{page.data.notification}</p>
 {/if}
+  <a href="/">Home</a>
 <div>Welcome, <span class="font-bold text-blue-700">{username}</span></div>
 {@render children?.()}

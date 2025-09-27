@@ -1,6 +1,7 @@
 <h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the
-  documentation
-</p>
-<a href="/products">Products</a>
+<div class="flex p-4 flex-col gap-4">
+
+
+  <a href="/products">Products</a>
+  <a href="/stocks">Stocks</a>
+</div>

@@ -38,5 +38,20 @@
       "price": 2600,
       "description": "Description 3"
     }
-  ]
+  ],
+
+  "most-active-stock": {
+    "symbol": "STOCK A",
+    "price": 351.0
+  },
+
+  "top-gaining-stock": {
+    "symbol": "STOCK B",
+    "price": 50.0
+  },
+
+  "top-losing-stock": {
+    "symbol": "STOCK C",
+    "price": 100.0
+  }
 }
