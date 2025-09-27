@@ -5,7 +5,7 @@ import { redirect } from "@sveltejs/kit";
 export const load = async (serverLoadEvent) => {
   const { fetch, params } = serverLoadEvent;
   const { productId } = params;
-
+  const notification = "End of season sale! 50% off!";
   const title = "Product details";
   const url = `http://localhost:4000/products/${productId}`;
 
@@ -15,5 +15,5 @@ export const load = async (serverLoadEvent) => {
     throw redirect(307, "/products");
   }
   const product = await response.json();
-  return { title, product };
+  return { title, product, notification };
 };
