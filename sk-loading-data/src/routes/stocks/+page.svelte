@@ -1,17 +1,16 @@
 <script>
+  import { invalidateAll } from '$app/navigation';
+
   // @ts-ignore
-  let { children, data } = $props();
+  let { data } = $props();
+  function refresh(){
+    invalidateAll();
+  }
 </script>
 
-<span>Most active stock - {data.mostActiveStock.symbol}</span>
-<span>Top gaining stock - {data.topGainingStock.symbol}</span>
-<span>Top losing stock - {data.topLosingStock.symbol}</span>
+<h1>Actively trading stocks</h1>
 
-{@render children?.()}
-
-<style>
-    span{
-        margin-right: 30px;
-        font-size: 24px;
-    }
-</style>
+{#each data.stocks as stock}
+  <h2>{stock.symbol} - ${stock.price}</h2>
+{/each}
+<button class="px-4 py-2 bg-sky-400 rounded-md cursor-pointer hover:bg-sky-500" onclick={refresh}>Refresh</button>

@@ -42,7 +42,7 @@
 
   "most-active-stock": {
     "symbol": "STOCK A",
-    "price": 351.0
+    "price": 751.0
   },
 
   "top-gaining-stock": {
@@ -53,5 +53,19 @@
   "top-losing-stock": {
     "symbol": "STOCK C",
     "price": 100.0
-  }
+  },
+  "stocks": [
+    {
+      "symbol": "STOCK D",
+      "price": 400.0
+    },
+    {
+      "symbol": "STOCK E",
+      "price": 1000.0
+    },
+    {
+      "symbol": "STOCK F",
+      "price": 340.0
+    }
+  ]
 }
