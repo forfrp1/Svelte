@@ -2,7 +2,9 @@ import Product from "./product.svelte";
 
 export const load = async (loadEvent) => {
   console.log("universal side load functions");
-  const { fetch, data } = loadEvent;
+  const { fetch, data,parent } = loadEvent;
+    const parentData = await parent();
+  const { username } = parentData;
   //   const title = "List of available products";
   //   const url = "http://localhost:4000/products";
   //   try {
@@ -16,5 +18,5 @@ export const load = async (loadEvent) => {
   //     console.log(error);
   //   }
 
-  return { ...data, Component: Product };
+  return { ...data, Component: Product,username };
 };

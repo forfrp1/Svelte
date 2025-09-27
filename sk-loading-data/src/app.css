@@ -2,6 +2,9 @@
 
 
 @layer base{
+    body{
+        @apply p-4
+    }
     h1{
         @apply font-bold text-2xl
     }
