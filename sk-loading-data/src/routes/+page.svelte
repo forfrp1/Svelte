@@ -1,4 +1,17 @@
+<!-- preload code -->
+<!-- when scroll preside to the element -->
+<!-- data-sveltekit-preload-code="viewport" -->
+<!-- when page load -->
+<!-- data-sveltekit-preload-code="eager" -->
+<!-- data-sveltekit-preload-code="hover" -->
+<!-- data-sveltekit-preload-code="tap" -->
+<!-- data-sveltekit-preload-code="off" -->
+
+<!-- preload data -->
+<!-- data-sveltekit-preload-data="hover" -->
+<!-- data-sveltekit-preload-data="tap" -->
+<!-- data-sveltekit-preload-data="off" -->
 <div class="flex py-4 flex-col gap-2">
-  <a href="/products" >Products</a>
+  <a href="/products" data-sveltekit-preload-code="viewport">Products</a>
   <a href="/stocks">Stocks</a>
 </div>
