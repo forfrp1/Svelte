@@ -1,5 +1,6 @@
 <script>
   import { goto, preloadData } from "$app/navigation";
+  let {data} = $props()
 </script>
 
 <!-- preload code -->
@@ -15,6 +16,7 @@
 <!-- data-sveltekit-preload-data="hover" -->
 <!-- data-sveltekit-preload-data="tap" -->
 <!-- data-sveltekit-preload-data="off" -->
+<div>@{data.currentTime}</div>
 <div class="flex py-4 flex-col gap-2">
   <a href="/products" data-sveltekit-preload-code="viewport">Products</a>
   <a href="/stocks">Stocks</a>
