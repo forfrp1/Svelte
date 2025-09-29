@@ -6,3 +6,4 @@ export const load = async (loadEvent) => {
 
   return { ...data, username };
 };
+export const prerender = true;

@@ -20,3 +20,5 @@ export const load = async (loadEvent) => {
   const notification = "End of season sale!";
   return { ...data, Component: Product, username, notification };
 };
+
+export const prerender = true
