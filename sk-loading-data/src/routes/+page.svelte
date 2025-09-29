@@ -1,3 +1,7 @@
+<script>
+  import { goto, preloadData } from "$app/navigation";
+</script>
+
 <!-- preload code -->
 <!-- when scroll preside to the element -->
 <!-- data-sveltekit-preload-code="viewport" -->
@@ -15,3 +19,16 @@
   <a href="/products" data-sveltekit-preload-code="viewport">Products</a>
   <a href="/stocks">Stocks</a>
 </div>
+<button
+  onfocus={async () => {
+    await preloadData("/stocks");
+  }}
+  onmouseover={async () => {
+    await preloadData("/stocks");
+  }}
+  onclick={() => {
+    goto("/stocks");
+  }}
+>
+  go to stocks
+</button>
