@@ -17,12 +17,12 @@
     placeholder="Password"
   />
   <button
-    formaction="?/login"
+    formaction="/auth/?/login"
     class="cursor-pointer hover:bg-red-500 duration-200 bg-red-400 p-1"
     type="submit">Login</button
   >
   <button
-    formaction="?/register"
+    formaction="/auth/?/register"
     class="cursor-pointer hover:bg-blue-500 duration-200 bg-blue-400 p-1"
     >Register</button
   >
