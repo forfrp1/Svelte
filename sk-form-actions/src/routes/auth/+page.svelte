@@ -9,6 +9,7 @@
     class="bg-blue-200 p-2"
     name="username"
     placeholder="Username"
+    value={form?.username ?? ''}
   />
   <input
     type="password"
