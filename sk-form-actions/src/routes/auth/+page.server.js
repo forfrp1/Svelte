@@ -1,11 +1,11 @@
 // export const load = ()=>{
 
-import { fail } from "@sveltejs/kit";
+import { fail, redirect } from "@sveltejs/kit";
 
 // }
 
 export const actions = {
-  login: async ({ request, cookies }) => {
+  login: async ({ request, cookies,url }) => {
     const data = await request.formData();
     const username = data.get("username");
     const password = data.get("password");
@@ -14,9 +14,9 @@ export const actions = {
     }
     // @ts-ignore
     cookies.set("username", username, { path: "/" });
-    return { message: "Logged in" };
+    throw redirect(303,url.searchParams.get("redirectTo") || '/')
   },
-  register: async ({ request, cookies }) => {
+  register: async ({ request, cookies ,url}) => {
     const data = await request.formData();
     const username = data.get("username");
     const password = data.get("password");
@@ -25,6 +25,6 @@ export const actions = {
     }
     // @ts-ignore
     cookies.set("username", username, { path: "/" });
-    return { message: "successfully registered" };
+     throw redirect(303,url.searchParams.get("redirectTo") || '/')
   },
 };
